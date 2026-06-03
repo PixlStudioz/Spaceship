@@ -119,51 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &184209786
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 184209788}
-  - component: {fileID: 184209787}
-  m_Layer: 0
-  m_Name: SpriteChanger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &184209787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184209786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fd46e06814be9c429b6c748eca942d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteChanger
-  theRenderer: {fileID: 501897992}
---- !u!4 &184209788
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184209786}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.97542, y: 0.26556, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &208265143
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,8 +381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 501897993}
   - component: {fileID: 501897992}
-  - component: {fileID: 501897994}
-  - component: {fileID: 501897995}
+  - component: {fileID: 501897996}
   m_Layer: 0
   m_Name: starShip_0
   m_TagString: Untagged
@@ -508,7 +462,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &501897994
+--- !u!114 &501897996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -517,23 +471,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 501897991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e5cb7f8e49b43e4ba26724e0c93127c, type: 3}
+  m_Script: {fileID: 11500000, guid: 236cb7207ae89ed4e9d7bb5f2930146e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteScaler
-  maxScale: 1
---- !u!114 &501897995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 501897991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea20689e60ff36a40a066236db8713bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  m_EditorClassIdentifier: Assembly-CSharp::ShipPawn
   moveSpeed: 5
+  turboSpeed: 10
+  rotateSpeed: 180
+  worldTeleportDistance: 1
+  randomTeleportRange: 10
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,7 +824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Speen
   rotationSpeed: 100
---- !u!1 &1422461528
+--- !u!1 &1485857068
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -887,38 +832,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1422461530}
-  - component: {fileID: 1422461529}
+  - component: {fileID: 1485857070}
+  - component: {fileID: 1485857069}
   m_Layer: 0
-  m_Name: PlayerMovement
+  m_Name: PlayerController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1422461529
+--- !u!114 &1485857069
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1422461528}
+  m_GameObject: {fileID: 1485857068}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea20689e60ff36a40a066236db8713bb, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  moveSpeed: 5
---- !u!4 &1422461530
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  pawn: {fileID: 501897996}
+--- !u!4 &1485857070
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1422461528}
+  m_GameObject: {fileID: 1485857068}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15337, y: 0.14049, z: 0}
+  m_LocalPosition: {x: -0.87048, y: 0.00225, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -929,12 +874,11 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 184209788}
   - {fileID: 501897993}
   - {fileID: 208265145}
   - {fileID: 1347847911}
   - {fileID: 959303358}
   - {fileID: 362176727}
   - {fileID: 555464193}
-  - {fileID: 1422461530}
   - {fileID: 369350780}
+  - {fileID: 1485857070}
