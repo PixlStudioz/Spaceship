@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
             pawn.WorldTeleport(Vector2.up);
-
         if (Input.GetKeyDown(KeyCode.DownArrow))
             pawn.WorldTeleport(Vector2.down);
 

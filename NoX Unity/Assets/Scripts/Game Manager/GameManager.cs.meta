@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 6bd663225c9641c49bcee5a541da0607
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - objectToSpawn: {instanceID: 0}
+  - spawnpoint: {instanceID: 0}
+  - TitleScreenStateObject: {instanceID: 0}
+  - MainMenuStateObject: {instanceID: 0}
+  - OptionsScreenStateObject: {instanceID: 0}
+  - CreditsScreenStateObject: {instanceID: 0}
+  - GameplayStateObject: {instanceID: 0}
+  - GameOverScreenStateObject: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
